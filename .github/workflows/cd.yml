@@ -42,4 +42,11 @@ jobs:
           path: dist
 
       - run: ls dist
-      #
+      
+      - uses: actions/checkout@v5
+
+      - name: Deploy to GitHub page
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist
