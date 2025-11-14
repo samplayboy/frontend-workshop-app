@@ -9,7 +9,7 @@ on:
 
 jobs:
   build-prod-job:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     steps:
       - uses: actions/checkout@v5
 
@@ -32,7 +32,7 @@ jobs:
           path: dist
 
   auto-deploy-job:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     needs: build-prod-job
     steps:
       - name: Download dist folder artifact
