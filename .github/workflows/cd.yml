@@ -33,7 +33,7 @@ jobs:
 
   auto-deploy-job:
     runs-on: ubuntu-latest
-    need: build-prod-job
+    needs: build-prod-job
     steps:
       - name: Download dist folder artifact
         uses: actions/download-artifact@v5
