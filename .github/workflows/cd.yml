@@ -39,7 +39,7 @@ jobs:
         uses: actions/download-artifact@v6
         with:
           name: dist-production
-          path: dist
+          #path: dist
 
       - run: ls dist
       
