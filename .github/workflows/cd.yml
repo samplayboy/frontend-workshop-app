@@ -36,12 +36,12 @@ jobs:
     needs: build-prod-job
     steps:
       - uses: actions/checkout@v5
-      
+
       - name: Download dist folder artifact
         uses: actions/download-artifact@v6
         with:
           name: dist-production
-          #path: dist
+          path: dist
 
       - run: ls -R
 
